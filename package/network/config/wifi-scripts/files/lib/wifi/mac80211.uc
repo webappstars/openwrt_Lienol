@@ -91,7 +91,7 @@ for (let phy_name, phy in board.wlan) {
 			id += `\nset ${s}.radio='${radio.index}'`;
 
 		let ssid = "OpenWrt";
-		if (band_name == "5G")
+		if (band_name != '2g')
 			ssid = ssid + "_5G";
 
 		print(`set ${s}=wifi-device
